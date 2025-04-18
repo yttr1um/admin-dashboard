@@ -46,7 +46,7 @@ li {
 
 .top {
     background-color: white;
-    box-shadow: 0 7px 10px -5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 7px 10px -5px rgba(0, 0, 0, 0.20);
     z-index: 1;
 }
 
@@ -59,9 +59,26 @@ li {
     gap: 20px;
 }
 
-.projects {
-    outline: 1px solid green;
+.projects-container {
     grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.projects {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    flex: 1;
+}
+
+.projects > div {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 7px 10px -5px rgba(0, 0, 0, 0.20);
+    border-left: 10px solid gold;
+    padding: 10px;
 }
 
 .announcements {
