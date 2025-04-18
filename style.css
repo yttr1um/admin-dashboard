@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 5fr;
+}
+
+.sidebar {
+    background-color: lightcoral;
+    grid-row: 1 / 3;
+}
+
+.top {
+    background-color: lightgreen;
+}
+
+.main {
+    background-color: lightskyblue;
+}
