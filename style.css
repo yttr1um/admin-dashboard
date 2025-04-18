@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --light-blue: #0099ff;
     --light-grey: #e6e6ff;
@@ -17,8 +19,10 @@ li {
     display: grid;
     grid-template: 1fr 4fr / 1fr 5fr;
 
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
 }
+
+/* Sidebar */
 
 .sidebar {
     background-color: var(--light-blue);
@@ -39,17 +43,88 @@ li {
     display: flex;
 }
 
-.logo-title img{
-    height: 50px;
-    fill: white;
-}
+/* Top*/
 
 .top {
     background-color: white;
     box-shadow: 0 7px 10px -5px rgba(0, 0, 0, 0.20);
     z-index: 1;
+
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    padding: 0 5%;
 }
 
+.top > * {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    gap: 15px;
+}
+
+.search button {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+}
+
+.search input {
+    box-sizing: border-box;
+    width: 75%;
+    height: 35%;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--light-grey);
+    padding: 10px;
+}
+
+.search input:focus {
+    outline: 2px solid blue;
+}
+
+.user-bottom {
+    gap: 25px;
+}
+
+.username-container {
+    font-weight: bold;
+}
+
+.pfp {
+    flex: 0 0 50px;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.username {
+    font-size: 1.5rem;
+}
+
+.btns {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    /* padding: 10px 75px; */
+}
+
+.btns > button {
+    padding: 15px;
+    flex: 1 0 100px;
+    max-width: 125px;
+    border-radius: 25px;
+    background-color: var(--light-blue);
+    border: none;
+
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Main content*/
 .main {
     background-color: var(--light-grey);
     padding: 20px;
