@@ -8,6 +8,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 li {
@@ -84,8 +85,21 @@ li {
     outline: 2px solid blue;
 }
 
+.user-top {
+    justify-content: flex-end;
+    gap: 25px;
+    font-weight: bold;
+}
+
+.user-top .pfp {
+    --dimension: 55px;
+    flex: 0 0 var(--dimension);
+    height: var(--dimension);
+}
+
 .user-bottom {
     gap: 25px;
+    padding-bottom: 20px;
 }
 
 .username-container {
@@ -93,11 +107,16 @@ li {
 }
 
 .pfp {
-    flex: 0 0 50px;
-    height: 50px;
+    --dimension: 70px;
+    flex: 0 0 var(--dimension);
+    height: var(--dimension);
     font-weight: bold;
     border-radius: 50%;
     background-color: red;
+}
+
+.greeting {
+    font-size: 0.90rem;
 }
 
 .username {
@@ -106,9 +125,8 @@ li {
 
 .btns {
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 10px;
-    /* padding: 10px 75px; */
 }
 
 .btns > button {
@@ -130,7 +148,7 @@ li {
     padding: 20px;
 
     display: grid;
-    grid-template: 1fr 1fr / 3fr 1fr;
+    grid-template: repeat(2, fit-content(100%)) / 3fr 1fr;
     gap: 20px;
 }
 
@@ -159,7 +177,7 @@ li {
     background-color: white;
     border-radius: 10px;
     box-shadow: 5px 7px 10px -5px rgba(0, 0, 0, 0.20);
-    padding: 10px;
+    padding: 20px;
 }
 
 .projects > div {
@@ -168,4 +186,15 @@ li {
 
 .announcements, .trending {
     flex: 1;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.announcements >div:not(:first-child) {
+    border-top: 1px solid lightgrey;
+    padding-top: 10px;
 }
